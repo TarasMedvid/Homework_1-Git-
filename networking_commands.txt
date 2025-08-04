@@ -1,0 +1,8 @@
+ssh-keygen -t ed25519 -C "git" -f ~/.ssh/git
+nano ~/.ssh/config
+cat ~/.ssh/git.pub
+git clone git@github.com:TarasMedvid/Homework_1-Git-.git
+ssh-keygen -t ed25519 -C "aws" -f ~/.ssh/aws
+cat ~/.ssh/aws.pub
+ssh -i ~/.ssh/aws -p 22 ec2-user@18.159.59.35
+ssh -i ~/.ssh/aws -L 8888:localhost:80 -N -p 22 ec2-user@18.159.59.35
